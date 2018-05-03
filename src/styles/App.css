@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Gamja+Flower|Montserrat:300,400,500,600|Muli:300,400,600,700|PT+Sans+Narrow:400,700");
+.navbar {
+  background-color: transparent; }
+  .navbar.navbar-expand-lg {
+    padding: 0; }
+  .navbar .hamburger-btn {
+    flex-basis: 53px;
+    width: 53px;
+    height: 45px;
+    margin: 0.5rem;
+    position: relative;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer; }
+    @media (min-width: 767px) {
+      .navbar .hamburger-btn {
+        display: none; } }
+    .navbar .hamburger-btn span {
+      display: block;
+      position: absolute;
+      height: 6px;
+      width: 100%;
+      background: #1083ba;
+      border-radius: 6px;
+      opacity: 1;
+      left: 0;
+      transform: rotate(0deg);
+      transition: 0.35s ease-in-out; }
+      .navbar .hamburger-btn span:nth-child(1), .navbar .hamburger-btn span:nth-child(2), .navbar .hamburger-btn span:nth-child(3) {
+        transform-origin: left center; }
+      .navbar .hamburger-btn span:nth-child(1) {
+        top: 5px; }
+      .navbar .hamburger-btn span:nth-child(2) {
+        top: 17px; }
+      .navbar .hamburger-btn span:nth-child(3) {
+        top: 29px; }
+    .navbar .hamburger-btn.open span:nth-child(1) {
+      transform: rotate(45deg);
+      top: -3px;
+      left: 8px; }
+    .navbar .hamburger-btn.open span:nth-child(2) {
+      width: 0%;
+      opacity: 0; }
+    .navbar .hamburger-btn.open span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 35px;
+      left: 8px; }
+  .navbar .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    flex-basis: 100%;
+    width: 100%; }
+    .navbar .navbar-nav .nav-item {
+      padding: 1.2rem;
+      flex-basis: 25%;
+      text-align: center;
+      transition: all 0.35s ease-in-out; }
+      .navbar .navbar-nav .nav-item:hover, .navbar .navbar-nav .nav-item.active {
+        background-color: rgba(25, 23, 22, 0.1);
+        cursor: pointer; }
+      .navbar .navbar-nav .nav-item .nav-link {
+        padding: 0.7rem;
+        color: #1083ba;
+        font-family: "Muli", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding: 0; }
+        .navbar .navbar-nav .nav-item .nav-link:hover {
+          color: #1083ba; }
+
+.hero {
+  background-color: #191716 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 1.3rem;
+  height: 700px; }
+  .hero .about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff8f0;
+    font-family: "Muli", sans-serif; }
+    .hero .about-me .title {
+      margin-top: 2rem;
+      font-family: "PT Sans Narrow", sans-serif;
+      font-size: 4rem; }
+      .hero .about-me .title .name {
+        color: #1083ba; }
+    .hero .about-me .about-me-context {
+      font-size: 2.8rem; }
+    .hero .about-me .about-btn {
+      background-color: transparent;
+      padding: 0.9rem 2rem;
+      margin-top: 1rem;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: #ffae5e;
+      border-color: #ffae5e; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+img {
+  max-width: 100%; }
+
+/*******************
+FadeIn
+*******************/
+.FadeIn-appear {
+  opacity: 0; }
+
+.FadeIn-appear.FadeIn-appear-active {
+  opacity: 1;
+  transition: all 3000ms linear; }
+
+.FadeIn-leave {
+  opacity: 1; }
+
+.FadeIn-leave.FadeIn-leave-active {
+  opacity: 0;
+  transition: all 3000ms linear; }
+
+/*******************
+SlideIn
+*******************/
+.SlideIn-appear {
+  transform: translateX(15%);
+  opacity: 0; }
+
+.SlideIn-appear.SlideIn-appear-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 500ms linear; }
+
+.SlideIn-leave {
+  opacity: 1;
+  transform: translateX(15%); }
+
+.SlideIn-leave.SlideIn-leave-active {
+  opacity: 0;
+  transform: translateX(15%);
+  transition: all 200ms linear; }
+
+/*# sourceMappingURL=App.css.map */

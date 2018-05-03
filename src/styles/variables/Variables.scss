@@ -1,0 +1,27 @@
+// COlORS
+$darkImperialBlue: #08415c;
+$orange: #ff8811;
+$darkKomaru: #392f5a;
+
+$white: #fff8f0;
+$black: #191716;
+
+//FONT
+
+$mainFont: 'Muli', sans-serif;
+$secondaryFont: 'Montserrat', sans-serif;
+$logoFont: 'Gamja Flower', cursive;
+$headersFont: 'PT Sans Narrow', sans-serif;
+
+// TRANSITION SPEED
+
+$slowSp: 1s;
+$medSp: 0.5s;
+$highSp: 0.35s;
+
+// MEDIA QUERIES
+$breakpoints: (
+  'mobile': 767px,
+  'tablet': 992px,
+  'desktop': 1200px
+) !default;

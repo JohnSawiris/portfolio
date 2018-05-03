@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Gamja+Flower|Montserrat:300,400,500,600|Muli:300,400,600,700|PT+Sans+Narrow:400,700');
+@import "./mixins/Mixins";
+@import "./variables/Variables";
+@import "./components/Navigation";
+@import "./components/Hero";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*******************
+FadeIn
+*******************/
+
+.FadeIn-appear {
+  opacity: 0;
+}
+
+.FadeIn-appear.FadeIn-appear-active {
+  opacity: 1;
+  transition: all 3000ms linear;
+}
+
+.FadeIn-leave {
+  opacity: 1;
+}
+
+.FadeIn-leave.FadeIn-leave-active {
+  opacity: 0;
+  transition: all 3000ms linear;
+}
+
+
+/*******************
+SlideIn
+*******************/
+
+.SlideIn-appear {
+  transform: translateX(15%);
+  opacity: 0;
+}
+
+.SlideIn-appear.SlideIn-appear-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 500ms linear;
+}
+
+.SlideIn-leave {
+    opacity: 1;
+    transform: translateX(15%);
+}
+
+.SlideIn-leave.SlideIn-leave-active {
+    opacity: 0;
+    transform: translateX(15%);
+    transition: all 200ms linear;
+}
