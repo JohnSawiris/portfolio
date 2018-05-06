@@ -15,12 +15,12 @@ class App extends Component {
   render() {
     return(
       <Fragment>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/recentwork" component={RecentWork} />
+          <Route path="/about" component={About} />
+        </Switch>
         <Navigation />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/recentwork" component={RecentWork} />
-            <Route path="/about" component={About} />
-          </Switch>
       </Fragment>
     )
   }

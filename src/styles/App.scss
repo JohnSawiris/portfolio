@@ -41,7 +41,7 @@ SlideIn
 *******************/
 
 .SlideIn-appear {
-  transform: translateX(15%);
+  transform: translateY(3rem);
   opacity: 0;
 }
 
@@ -53,7 +53,7 @@ SlideIn
 
 .SlideIn-leave {
     opacity: 1;
-    transform: translateX(15%);
+    transform: translateY(-3rem);
 }
 
 .SlideIn-leave.SlideIn-leave-active {

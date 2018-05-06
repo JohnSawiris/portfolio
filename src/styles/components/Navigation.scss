@@ -1,5 +1,5 @@
 .navbar {
-  background-color: transparent;
+  background-color: lighten($darkImperialBlue, 15%);
 
   &.navbar-expand-lg {
     padding: 0;
@@ -24,7 +24,7 @@
       position: absolute;
       height: 6px;
       width: 100%;
-      background: lighten($darkImperialBlue, 20%);
+      background: lighten($white, 20%);
       border-radius: 6px;
       opacity: 1;
       left: 0;
@@ -72,33 +72,49 @@
   .navbar-nav {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     align-items: center;
     flex-basis: 100%;
     width: 100%;
 
     .nav-item {
-      padding: 1.2rem;
-      flex-basis: 25%;
+      flex-basis: 15%;
       text-align: center;
       transition: all $highSp ease-in-out;
+      padding-top: 1rem;
+      margin-right: 1%;
 
-      &:hover, &.active {
-        background-color: transparentize($black, 0.9);
-        cursor: pointer;
+      &:hover {
+        background-color: transparentize($white, 0.9);
       }
+
+      &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin-top: 1rem;
+        border-bottom: 2px solid darken($dogwoodRose, 15%);
+        transform-origin: 0% 100%;
+        transform: scale(0);
+        transition: all 0.3s linear;
+      }
+
+      &:hover::after, &.active::after {
+        transform: scale(1);
+      }
+
       .nav-link {
-        padding: 0.7rem;
-        color: lighten($darkImperialBlue, 20%);
+        color: lighten($white, 20%);
         font-family: $mainFont;
-        font-size: 1.3rem;
-        font-weight: 600;
+        font-size: 1rem;
+        font-weight: 300;
         letter-spacing: 1px;
         padding: 0;
 
         &:hover {
-          color: lighten($darkImperialBlue, 20%);
+          color: $dogwoodRose;
         }
       }
     }

@@ -10,11 +10,11 @@ class Home extends Component {
     return(
       <Fragment>
         <ReactCSSTransitionGroup
+          transitionName='SlideIn'
           transitionAppear={true}
           transitionAppearTimeout={500}
           transitionEnterTimeout={500}
           transitionLeaveTimeout={200}
-          transitionName='SlideIn'
         >
         <Hero />
         </ReactCSSTransitionGroup>

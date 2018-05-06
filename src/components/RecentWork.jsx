@@ -10,13 +10,12 @@ class ReacentWork extends Component {
     return(
       <Fragment>
           <ReactCSSTransitionGroup
+            transitionName='SlideIn'
             transitionAppear={true}
             transitionAppearTimeout={500}
             transitionEnterTimeout={500}
             transitionLeaveTimeout={200}
-            transitionName='SlideIn'
           >
-            <h1>RECENT WORK</h1>
             <Hero />
           </ReactCSSTransitionGroup>
       </Fragment>
