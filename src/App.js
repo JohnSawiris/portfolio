@@ -9,6 +9,7 @@ import './styles/App.css';
 import Navigation from './components/Navigation';
 import Home from './components/Home';
 import About from './components/About';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
             component={Home} />
           <Route path="/about" component={About} />
         </Switch>
+        <Footer />
       </Fragment>
     )
   }

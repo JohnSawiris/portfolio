@@ -25,10 +25,10 @@ class Navigation extends Component {
 
         <ul className="navbar-nav">
           <li className="nav-item">
-            <Link className="nav-link" to="/">Home</Link>
+            <Link className="nav-link" to="/">home</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="about">About</Link>
+            <Link className="nav-link" to="about">about me</Link>
           </li>
         </ul>
       </nav>

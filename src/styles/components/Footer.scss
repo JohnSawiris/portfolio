@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ul {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-basis: 100%;
+    width: 100%;
+
+    li {
+      margin: 1rem;
+      font-size: 1.8rem;
+
+      a {
+        color: $white;
+        transition: color $medSp ease;
+
+        &:hover {
+          color: lighten($darkImperialBlue, 5%);
+        }
+      }
+    }
+  }
+}
