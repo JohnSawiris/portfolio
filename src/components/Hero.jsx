@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import ReactCssTransitionGroup from 'react-addons-css-transition-group';
-import profileImage from '../images/profile-image.jpg';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return(
@@ -8,20 +8,17 @@ const Hero = () => {
       <div className="container-fluid hero">
         <ReactCssTransitionGroup
           transitionAppear={true}
-          transitionAppearTimeout={3000}
-          transitionEnterTimeout={3000}
-          transitionLeaveTimeout={3000}
+          transitionAppearTimeout={1200}
+          transitionEnterTimeout={1200}
+          transitionLeaveTimeout={1200}
           transitionName='FadeIn'
           >
             <div className="about-me">
-              <div className="profile-image">
-                <img src={profileImage} alt="John Sawiris" />
-              </div>
               <span>
                 <h1 className="title">Hello, my name is <span className="name">John Sawiris</span>.</h1>
-                <p className="about-me-context">I'm a front-end web developer.</p>
+                <p className="front-end">I'm a front-end web developer.</p>
               </span>
-              <button type="button" className="about-btn">View my work <i className="fas fa-arrow-right"></i> </button>
+              <Link to="/about" className="about-btn">View my work <i className="fas fa-arrow-right"></i> </Link>
             </div>
         </ReactCssTransitionGroup>
       </div>

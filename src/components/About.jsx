@@ -1,14 +1,20 @@
-import React, { Component, Fragment } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import ReactCssTransitionGroup from 'react-addons-css-transition-group';
 
-class About extends Component {
-  render () {
-    return(
-      <Fragment>
-        <h1>ABOUT PAGE</h1>
-      </Fragment>
-    );
-  }
-}
+import WithAnimation from './HOC/WithAnimation';
 
-export default About;
+const About = () => (
+    <div className="about">
+      <ReactCssTransitionGroup
+        transitionAppear={true}
+        transitionAppearTimeout={2000}
+        transitionEnterTimeout={2000}
+        transitionLeaveTimeout={2000}
+        transitionName='FadeIn'
+        >
+      <h1>About Page</h1>
+      </ReactCssTransitionGroup>
+    </div>
+  );
+
+export default WithAnimation(About, 'SlideIn', 500, 500, 500);

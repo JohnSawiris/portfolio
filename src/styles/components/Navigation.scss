@@ -1,89 +1,25 @@
 .navbar {
-  background-color: lighten($darkImperialBlue, 15%);
+  justify-content: flex-end;
 
   &.navbar-expand-lg {
     padding: 0;
   }
-
-  .hamburger-btn {
-    flex-basis: 53px;
-    width: 53px;
-    height: 45px;
-    margin: 0.5rem;
-    position: relative;
-    transform: rotate(0deg);
-    transition: $medSp ease-in-out;
-    cursor: pointer;
-
-    @include respond-to('mobile') {
-      display: none;
-    };
-
-    span {
-      display: block;
-      position: absolute;
-      height: 6px;
-      width: 100%;
-      background: lighten($white, 20%);
-      border-radius: 6px;
-      opacity: 1;
-      left: 0;
-      transform: rotate(0deg);
-      transition: $highSp ease-in-out;
-
-      &:nth-child(1), &:nth-child(2), &:nth-child(3) {
-        transform-origin: left center;
-      }
-      &:nth-child(1) {
-        top: 5px;
-      }
-
-      &:nth-child(2) {
-        top: 17px;
-      }
-
-      &:nth-child(3) {
-        top: 29px;
-      }
-    }
-
-    &.open {
-      span {
-        &:nth-child(1) {
-          transform: rotate(45deg);
-          top: -3px;
-          left: 8px;
-        }
-
-        &:nth-child(2) {
-          width: 0%;
-          opacity: 0;
-        }
-
-        &:nth-child(3) {
-          transform: rotate(-45deg);
-          top: 35px;
-          left: 8px;
-        }
-      }
-    }
-  } // hamburger-btn ends
 
   .navbar-nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    align-items: center;
+    justify-content: flex-end;
     flex-basis: 100%;
     width: 100%;
 
     .nav-item {
       flex-basis: 15%;
+      width: 15%;
       text-align: center;
       transition: all $highSp ease-in-out;
-      padding-top: 1rem;
-      margin-right: 1%;
+      padding-top: 0.7rem;
 
       &:hover {
         background-color: transparentize($white, 0.9);
@@ -94,11 +30,17 @@
         display: block;
         width: 100%;
         height: 100%;
-        margin-top: 1rem;
-        border-bottom: 2px solid darken($dogwoodRose, 15%);
+        margin-top: 0.4rem;
+        border-bottom: 2px solid lighten($darkImperialBlue, 15%);
         transform-origin: 0% 100%;
         transform: scale(0);
         transition: all 0.3s linear;
+      }
+
+      &.active {
+        .nav-link {
+          color: lighten($darkImperialBlue, 15%);
+        }
       }
 
       &:hover::after, &.active::after {
@@ -107,14 +49,14 @@
 
       .nav-link {
         color: lighten($white, 20%);
-        font-family: $mainFont;
-        font-size: 1rem;
-        font-weight: 300;
+        font-family: $headersFont;
+        font-size: 1.2rem;
+        font-weight: 400;
         letter-spacing: 1px;
         padding: 0;
 
-        &:hover {
-          color: $dogwoodRose;
+        &:hover, &:focus {
+          color: lighten($darkImperialBlue, 15%);
         }
       }
     }

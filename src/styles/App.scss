@@ -3,10 +3,12 @@
 @import "./variables/Variables";
 @import "./components/Navigation";
 @import "./components/Hero";
+@import "./components/About";
 
 body {
   margin: 0;
   padding: 0;
+  background-color: darken($black, 4%) !important;
 }
 
 img {
@@ -23,7 +25,16 @@ FadeIn
 
 .FadeIn-appear.FadeIn-appear-active {
   opacity: 1;
-  transition: all 3000ms linear;
+  transition: all 1200ms linear 500ms;
+}
+
+.FadeIn-enter {
+  opacity: 0;
+}
+
+.FadeIn-enter.FadeIn-enter-active {
+  opacity: 1;
+  transition: all 1200ms linear 500ms;
 }
 
 .FadeIn-leave {
@@ -32,23 +43,22 @@ FadeIn
 
 .FadeIn-leave.FadeIn-leave-active {
   opacity: 0;
-  transition: all 3000ms linear;
+  transition: all 1200ms linear 500ms;
 }
 
 
 /*******************
 SlideIn
 *******************/
-
-.SlideIn-appear {
+.SlideIn-enter {
   transform: translateY(3rem);
   opacity: 0;
 }
 
-.SlideIn-appear.SlideIn-appear-active {
+.SlideIn-enter.SlideIn-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: all 500ms linear;
+  transition: all 500ms ease-in;
 }
 
 .SlideIn-leave {
@@ -58,6 +68,41 @@ SlideIn
 
 .SlideIn-leave.SlideIn-leave-active {
     opacity: 0;
-    transform: translateX(15%);
-    transition: all 200ms linear;
+    transition: all 500ms ease-out;
+}
+
+/*******************
+SlideDown
+*******************/
+.SlideDown-appear {
+  opacity: 0;
+  transform: translateY(-2rem);
+}
+
+.SlideDown-appear.SlideDown-appear-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 600ms linear;
+}
+
+.SlideDown-enter {
+  opacity: 0;
+  transform: translateY(-2rem);
+}
+
+.SlideDown-enter.SlideDown-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 600ms linear;
+}
+
+.SlideDown-leave {
+  opacity: 1;
+  transform: translateY(2rem);
+}
+
+.SlideDown-leave.SlideDown-leaved-active {
+  opacity: 0;
+  transform: translateY(0);
+  transition: all 600ms linear;
 }
