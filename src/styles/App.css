@@ -123,12 +123,13 @@
 .about {
   display: flex;
   justify-content: center;
-  align-items: center;
+  flex-direction: column;
   padding: 2rem 1rem 0; }
   .about .about-content {
-    border-bottom: 1px solid #0e73a2;
     padding-bottom: 1rem;
-    margin-bottom: 2rem; }
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column; }
     .about .about-content .skill {
       display: flex;
       align-items: flex-end;
@@ -157,13 +158,54 @@
     line-height: 1.4rem;
     letter-spacing: 1px; }
 
+.projects {
+  color: #fff8f0;
+  padding: 2rem 1rem 0; }
+  .projects h1 {
+    color: #0e73a2;
+    text-align: center; }
+  .projects .project {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 0.7rem; }
+    .projects .project .fas {
+      display: block;
+      margin: auto;
+      font-size: 4rem; }
+    .projects .project .project-name {
+      font-size: 1rem;
+      font-weight: 500;
+      font-family: "Muli", sans-serif;
+      color: #0e73a2;
+      margin-top: 1rem; }
+    .projects .project .project-desc {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      flex-basis: 25%; }
+    .projects .project .technologies {
+      margin-top: 1rem;
+      flex-basis: 25%; }
+      .projects .project .technologies .tech-image {
+        display: block;
+        margin: auto;
+        width: 60px;
+        height: 50px; }
+      .projects .project .technologies h6 {
+        margin-bottom: 1rem; }
+      .projects .project .technologies p {
+        font-size: 0.8rem;
+        color: #fff8f0;
+        font-weight: 300;
+        text-align: center; }
+
 .footer {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+  display: block;
+  margin-top: auto; }
   .footer ul {
     display: flex;
     padding: 0;
+    margin: 0;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -178,6 +220,9 @@
         .footer ul li a:hover {
           color: #0a5273; }
 
+/*******************
+GENERAL
+*******************/
 body {
   margin: 0;
   padding: 0;
@@ -186,58 +231,64 @@ body {
 img {
   max-width: 100%; }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh; }
+
 /*******************
 FadeIn
 *******************/
 .FadeIn-appear {
-  opacity: 0; }
+  opacity: 0.01; }
 
 .FadeIn-appear.FadeIn-appear-active {
   opacity: 1;
-  transition: all 1500ms linear 500ms; }
+  transition: all 500ms ease-in; }
 
 .FadeIn-enter {
-  opacity: 0; }
+  opacity: 0.01; }
 
 .FadeIn-enter.FadeIn-enter-active {
   opacity: 1;
-  transition: all 1500ms linear 500ms; }
+  transition: all 500ms ease-in; }
 
 .FadeIn-leave {
-  opacity: 1; }
+  transform: translateY(-3rem); }
 
 .FadeIn-leave.FadeIn-leave-active {
   opacity: 0;
-  transition: all 1200ms linear 500ms; }
+  transition: all 500ms ease-out; }
 
 /*******************
 SlideIn
 *******************/
 .SlideIn-appear {
-  transform: translateY(3rem);
+  transform: translateY(2rem);
   opacity: 0.01; }
 
 .SlideIn-appear.SlideIn-appear-active {
   opacity: 1;
   transform: translateY(0);
-  transition: all 500ms ease-in; }
+  transition: all 700ms ease-in; }
 
 .SlideIn-enter {
-  transform: translateY(3rem);
+  transform: translateY(2rem);
   opacity: 0.01; }
 
 .SlideIn-enter.SlideIn-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: all 500ms ease-in; }
+  transition: all 700ms ease-in; }
 
 .SlideIn-leave {
   opacity: 1;
-  transform: translateY(-3rem); }
+  transform: translateY(-2rem); }
 
 .SlideIn-leave.SlideIn-leave-active {
   opacity: 0;
-  transition: all 500ms ease-out; }
+  transition: all 700ms ease-out; }
 
 /*******************
 SlideDown

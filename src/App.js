@@ -7,8 +7,9 @@ import './styles/App.css';
 
 //Routes Components
 import Navigation from './components/Navigation';
-import Home from './components/Home';
+import Hero from './components/Hero';
 import About from './components/About';
+import Projects from './components/Projects';
 import Footer from './components/Footer';
 
 class App extends Component {
@@ -18,8 +19,9 @@ class App extends Component {
         <Navigation />
         <Switch>
           <Route exact path="/"
-            component={Home} />
-          <Route path="/about" component={About} />
+            component={Hero} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/projects" component={Projects} />
         </Switch>
         <Footer />
       </Fragment>

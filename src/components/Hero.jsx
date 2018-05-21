@@ -1,29 +1,20 @@
 import React, { Fragment } from 'react';
-import ReactCssTransitionGroup from 'react-addons-css-transition-group';
 import { Link } from 'react-router-dom';
 
-const Hero = () => {
-  return(
-    <Fragment>
-      <div className="container-fluid hero">
-        <ReactCssTransitionGroup
-          transitionAppear={true}
-          transitionAppearTimeout={2000}
-          transitionEnterTimeout={2000}
-          transitionLeaveTimeout={2000}
-          transitionName='FadeIn'
-          >
-            <div className="about-me">
-              <span>
-                <h1 className="title">Hello, my name is <span className="name">John Sawiris</span>.</h1>
-                <p className="front-end">I'm a front-end web developer.</p>
-              </span>
-              <Link to="/about" className="about-btn">View my work <i className="fas fa-arrow-right"></i> </Link>
-            </div>
-        </ReactCssTransitionGroup>
-      </div>
-    </Fragment>
-  );
-};
+import WithAnimation from './HOC/WithAnimation';
 
-export default Hero;
+const Hero = (props) => (
+  <Fragment>
+    <div className="container-fluid hero">
+          <div className="about-me">
+            <span>
+              <h1 className="title">Hello, my name is <span className="name">John Sawiris</span>.</h1>
+              <p className="front-end">I'm a front-end web developer.</p>
+            </span>
+            <Link to="/projects" className="about-btn">View my work <i className="fas fa-arrow-right"></i> </Link>
+          </div>
+    </div>
+  </Fragment>
+);
+
+export default WithAnimation(Hero, 'FadeIn', 500, 500, 500);

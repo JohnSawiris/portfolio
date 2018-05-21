@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactCssTransitionGroup from 'react-addons-css-transition-group';
 
 import WithAnimation from './HOC/WithAnimation';
 
@@ -22,23 +21,17 @@ import html from '../images/html5.png';
 import cSharp from '../images/Logo_csharp.svg';
 
 
-const About = () => (
+const About = (props) => (
     <div className="about">
-      <ReactCssTransitionGroup
-        transitionAppear={true}
-        transitionAppearTimeout={2000}
-        transitionEnterTimeout={2000}
-        transitionLeaveTimeout={2000}
-        transitionName='FadeIn'
-        >
+
       <div className="about-content">
         <h2>about me</h2>
         <p>My passion is learning new things and being a web developer is signing up to be a lifetine learner.
         I moved to Portland, OR in 2014 from Cairo, Egypt. I gained experience working in customer service and technical support teams. In late 2016, I decided to learn website development. Learning new technologies and languages requires skills I already had, such as problem solving, attention to detail, and an open mind. I recently graduated from CSS/REACT track at Epicodus and I completed a two month internship at Trailhead marketing. These experiences have prepared me to an expert at frontend web development.
         </p>
       </div>
-      <h2>technical skills</h2>
       <div className="about-content container-fluid">
+        <h2>technical skills</h2>
         <div className="row">
           <div className="skill col-sm-4">
             <div className="skill-img">
@@ -126,8 +119,8 @@ const About = () => (
           </div>
         </div>
       </div>
-      </ReactCssTransitionGroup>
+
     </div>
   );
 
-export default WithAnimation(About, 'SlideIn', 500, 500, 500);
+export default WithAnimation(About, 'SlideIn', 700, 700, 700);

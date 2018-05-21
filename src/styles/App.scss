@@ -4,7 +4,12 @@
 @import "./components/Navigation";
 @import "./components/Hero";
 @import "./components/About";
+@import "./components/Projects";
 @import "./components/Footer";
+
+/*******************
+GENERAL
+*******************/
 
 body {
   margin: 0;
@@ -16,35 +21,42 @@ img {
   max-width: 100%;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
 /*******************
 FadeIn
 *******************/
 
 .FadeIn-appear {
-  opacity: 0;
+  opacity: 0.01;
 }
 
 .FadeIn-appear.FadeIn-appear-active {
   opacity: 1;
-  transition: all 1500ms linear 500ms;
+  transition: all 500ms ease-in;
 }
 
 .FadeIn-enter {
-  opacity: 0;
+  opacity: 0.01;
 }
 
 .FadeIn-enter.FadeIn-enter-active {
   opacity: 1;
-  transition: all 1500ms linear 500ms;
+  transition: all 500ms ease-in;
 }
 
 .FadeIn-leave {
-  opacity: 1;
+    transform: translateY(-3rem);
 }
 
 .FadeIn-leave.FadeIn-leave-active {
-  opacity: 0;
-  transition: all 1200ms linear 500ms;
+    opacity: 0;
+    transition: all 500ms ease-out;
 }
 
 
@@ -52,35 +64,35 @@ FadeIn
 SlideIn
 *******************/
 .SlideIn-appear {
-  transform: translateY(3rem);
+  transform: translateY(2rem);
   opacity: 0.01;
 }
 
 .SlideIn-appear.SlideIn-appear-active {
   opacity: 1;
   transform: translateY(0);
-  transition: all 500ms ease-in;
+  transition: all 700ms ease-in;
 }
 
 .SlideIn-enter {
-  transform: translateY(3rem);
+  transform: translateY(2rem);
   opacity: 0.01;
 }
 
 .SlideIn-enter.SlideIn-enter-active {
   opacity: 1;
   transform: translateY(0);
-  transition: all 500ms ease-in;
+  transition: all 700ms ease-in;
 }
 
 .SlideIn-leave {
     opacity: 1;
-    transform: translateY(-3rem);
+    transform: translateY(-2rem);
 }
 
 .SlideIn-leave.SlideIn-leave-active {
     opacity: 0;
-    transition: all 500ms ease-out;
+    transition: all 700ms ease-out;
 }
 
 /*******************
