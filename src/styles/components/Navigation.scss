@@ -15,11 +15,16 @@
     width: 100%;
 
     .nav-item {
-      flex-basis: 15%;
-      width: 15%;
+      flex-basis: 50%;
+      width: 50%;
       text-align: center;
       transition: all $highSp ease-in-out;
       padding-top: 0.7rem;
+
+      @include respond-to('mobile') {
+        flex-basis: 15%;
+        width: 15%;
+      };
 
       &:hover {
         background-color: transparentize($white, 0.9);

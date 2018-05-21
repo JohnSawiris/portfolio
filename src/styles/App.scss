@@ -26,7 +26,7 @@ FadeIn
 
 .FadeIn-appear.FadeIn-appear-active {
   opacity: 1;
-  transition: all 1200ms linear 500ms;
+  transition: all 1500ms linear 500ms;
 }
 
 .FadeIn-enter {
@@ -35,7 +35,7 @@ FadeIn
 
 .FadeIn-enter.FadeIn-enter-active {
   opacity: 1;
-  transition: all 1200ms linear 500ms;
+  transition: all 1500ms linear 500ms;
 }
 
 .FadeIn-leave {
@@ -51,9 +51,20 @@ FadeIn
 /*******************
 SlideIn
 *******************/
+.SlideIn-appear {
+  transform: translateY(3rem);
+  opacity: 0.01;
+}
+
+.SlideIn-appear.SlideIn-appear-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 500ms ease-in;
+}
+
 .SlideIn-enter {
   transform: translateY(3rem);
-  opacity: 0;
+  opacity: 0.01;
 }
 
 .SlideIn-enter.SlideIn-enter-active {

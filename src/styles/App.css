@@ -12,11 +12,15 @@
     flex-basis: 100%;
     width: 100%; }
     .navbar .navbar-nav .nav-item {
-      flex-basis: 15%;
-      width: 15%;
+      flex-basis: 50%;
+      width: 50%;
       text-align: center;
       transition: all 0.35s ease-in-out;
       padding-top: 0.7rem; }
+      @media (min-width: 767px) {
+        .navbar .navbar-nav .nav-item {
+          flex-basis: 15%;
+          width: 15%; } }
       .navbar .navbar-nav .nav-item:hover {
         background-color: rgba(255, 248, 240, 0.1); }
       .navbar .navbar-nav .nav-item:after {
@@ -51,7 +55,7 @@
   height: 90vh; }
   .hero .about-me {
     display: flex;
-    padding: 2rem;
+    padding: 2rem 1rem;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -60,23 +64,23 @@
     .hero .about-me .title {
       margin-top: 2rem;
       font-family: "PT Sans Narrow", sans-serif;
-      font-size: 2.3rem; }
+      font-size: 2rem; }
       @media (min-width: 992px) {
         .hero .about-me .title {
           font-size: 4rem; } }
       .hero .about-me .title .name {
         color: #1083ba; }
     .hero .about-me .front-end {
-      font-size: 1.1rem; }
+      font-size: 1rem; }
       @media (min-width: 992px) {
         .hero .about-me .front-end {
           font-size: 2.8rem; } }
     .hero .about-me .about-btn {
       background-color: transparent;
-      padding: 0.9rem 2rem;
+      padding: 0.9rem 1.5rem;
       font-family: "Montserrat", sans-serif;
       font-weight: 400;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       letter-spacing: 1px;
       color: #fff8f0;
       border: none;
@@ -190,14 +194,14 @@ FadeIn
 
 .FadeIn-appear.FadeIn-appear-active {
   opacity: 1;
-  transition: all 1200ms linear 500ms; }
+  transition: all 1500ms linear 500ms; }
 
 .FadeIn-enter {
   opacity: 0; }
 
 .FadeIn-enter.FadeIn-enter-active {
   opacity: 1;
-  transition: all 1200ms linear 500ms; }
+  transition: all 1500ms linear 500ms; }
 
 .FadeIn-leave {
   opacity: 1; }
@@ -209,9 +213,18 @@ FadeIn
 /*******************
 SlideIn
 *******************/
+.SlideIn-appear {
+  transform: translateY(3rem);
+  opacity: 0.01; }
+
+.SlideIn-appear.SlideIn-appear-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 500ms ease-in; }
+
 .SlideIn-enter {
   transform: translateY(3rem);
-  opacity: 0; }
+  opacity: 0.01; }
 
 .SlideIn-enter.SlideIn-enter-active {
   opacity: 1;

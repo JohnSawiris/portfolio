@@ -7,7 +7,7 @@
 
   .about-me {
     display: flex;
-    padding: 2rem;
+    padding: 2rem 1rem;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -17,7 +17,7 @@
     .title {
       margin-top: 2rem;
       font-family: $headersFont;
-      font-size: 2.3rem;
+      font-size: 2rem;
 
       @include respond-to('tablet') {
         font-size: 4rem;
@@ -29,7 +29,7 @@
     }// title ends
 
     .front-end {
-      font-size: 1.1rem;
+      font-size: 1rem;
 
       @include respond-to('tablet') {
         font-size: 2.8rem;
@@ -38,10 +38,10 @@
 
     .about-btn {
       background-color: transparent;
-      padding: 0.9rem 2rem;
+      padding: 0.9rem 1.5rem;
       font-family: $secondaryFont;
       font-weight: 400;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       letter-spacing: 1px;
       color: $white;
       border: none;

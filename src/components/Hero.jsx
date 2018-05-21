@@ -8,9 +8,9 @@ const Hero = () => {
       <div className="container-fluid hero">
         <ReactCssTransitionGroup
           transitionAppear={true}
-          transitionAppearTimeout={1200}
-          transitionEnterTimeout={1200}
-          transitionLeaveTimeout={1200}
+          transitionAppearTimeout={2000}
+          transitionEnterTimeout={2000}
+          transitionLeaveTimeout={2000}
           transitionName='FadeIn'
           >
             <div className="about-me">
