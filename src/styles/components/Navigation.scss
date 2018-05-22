@@ -10,13 +10,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-end;
     flex-basis: 100%;
     width: 100%;
 
     .nav-item {
-      flex-basis: 50%;
-      width: 50%;
+      flex-basis: 33%;
+      width: 33%;
       text-align: center;
       transition: all $highSp ease-in-out;
       padding-top: 0.7rem;

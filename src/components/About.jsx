@@ -22,7 +22,7 @@ import cSharp from '../images/Logo_csharp.svg';
 
 
 const About = (props) => (
-    <div className="about">
+    <div className="about container">
 
       <div className="about-content">
         <h2>about me</h2>
@@ -123,4 +123,4 @@ const About = (props) => (
     </div>
   );
 
-export default WithAnimation(About, 'SlideIn', 700, 700, 700);
+export default WithAnimation(About, 'SlideIn', 800, 800, 800);

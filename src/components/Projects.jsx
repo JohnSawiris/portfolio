@@ -16,7 +16,7 @@ import reactRouter from '../images/react-router.png';
 
 const Projects = (props) => (
   <div className="projects">
-    <h1>my work</h1>
+    <h1>projects</h1>
     <div className="container mt-5">
       <div className="row">
         <div className="col-sm-12 col-md-4">
@@ -29,15 +29,15 @@ const Projects = (props) => (
             <div className="container technologies">
               <h6>Technologies used:</h6>
               <div className="row justify-content-center">
-                <div className="col-sm-4">
+                <div className="col-sm-4 tech">
                   <img src={vue} alt="Vue" className="tech-image"/>
                   <p>Vue.js</p>
                 </div>
-                <div className="col-sm-4">
+                <div className="col-sm-4 tech">
                   <img src={vuex} alt="Vuex" className="tech-image"/>
                   <p>Vuex</p>
                 </div>
-                <div className="col-sm-4">
+                <div className="col-sm-4 tech">
                   <img src={vueRouter} alt="Vue Router" className="tech-image"/>
                   <p>Vue Router</p>
                 </div>
@@ -55,15 +55,15 @@ const Projects = (props) => (
             <div className="container technologies">
               <h6>Technologies used:</h6>
               <div className="row justify-content-center">
-                <div className="col-sm-4">
+                <div className="col-sm-4 tech">
                   <img src={angular} alt="Angular2" className="tech-image"/>
                   <p>Angular2</p>
                 </div>
-                <div className="col-sm-4">
+                <div className="col-sm-4 tech">
                   <img src={webpack} alt="Webpack" className="tech-image"/>
                   <p>Webpack</p>
                 </div>
-                <div className="col-sm-4">
+                <div className="col-sm-4 tech">
                   <img src={sass} alt="Sass" className="tech-image"/>
                   <p>Sass</p>
                 </div>
@@ -81,15 +81,15 @@ const Projects = (props) => (
               <div className="container technologies">
                 <h6>Technologies used:</h6>
                 <div className="row justify-content-center">
-                  <div className="col-sm-4">
+                  <div className="col-sm-4 tech">
                     <img src={react} alt="React" className="tech-image"/>
                     <p>React.js</p>
                   </div>
-                  <div className="col-sm-4">
+                  <div className="col-sm-4 tech">
                     <img src={redux} alt="Redux" className="tech-image"/>
                     <p>Redux</p>
                   </div>
-                  <div className="col-sm-4">
+                  <div className="col-sm-4 tech">
                     <img src={reactRouter} alt="React Router" className="tech-image"/>
                     <p>React Router</p>
                   </div>
@@ -102,4 +102,4 @@ const Projects = (props) => (
   </div>
 );
 
-export default WithAnimation(Projects, 'SlideIn', 500, 500, 500);
+export default WithAnimation(Projects, 'SlideIn', 800, 800, 800);

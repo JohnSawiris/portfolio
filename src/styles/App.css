@@ -8,12 +8,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-end;
     flex-basis: 100%;
     width: 100%; }
     .navbar .navbar-nav .nav-item {
-      flex-basis: 50%;
-      width: 50%;
+      flex-basis: 33%;
+      width: 33%;
       text-align: center;
       transition: all 0.35s ease-in-out;
       padding-top: 0.7rem; }
@@ -162,13 +161,14 @@
   color: #fff8f0;
   padding: 2rem 1rem 0; }
   .projects h1 {
-    color: #0e73a2;
-    text-align: center; }
+    color: #0e73a2; }
   .projects .project {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-bottom: 0.7rem; }
+    .projects .project:nth-child(2) {
+      background-color: #fff8f0; }
     .projects .project .fas {
       display: block;
       margin: auto;
@@ -184,13 +184,22 @@
       margin-top: 1rem;
       flex-basis: 25%; }
     .projects .project .technologies {
+      padding-bottom: 1rem;
       margin-top: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #0c628b;
       flex-basis: 25%; }
-      .projects .project .technologies .tech-image {
-        display: block;
-        margin: auto;
-        width: 60px;
-        height: 50px; }
+      @media (min-width: 767px) {
+        .projects .project .technologies {
+          border: none; } }
+      .projects .project .technologies .tech {
+        flex-basis: 33.33333%;
+        width: 33.33333%; }
+        .projects .project .technologies .tech .tech-image {
+          display: block;
+          margin: auto;
+          width: 60px;
+          height: 50px; }
       .projects .project .technologies h6 {
         margin-bottom: 1rem; }
       .projects .project .technologies p {
@@ -200,8 +209,14 @@
         text-align: center; }
 
 .footer {
-  display: block;
-  margin-top: auto; }
+  display: block; }
+  .footer .get-in-touch {
+    color: #fff8f0;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.3rem;
+    text-align: center;
+    font-weight: 300; }
   .footer ul {
     display: flex;
     padding: 0;

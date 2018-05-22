@@ -4,7 +4,6 @@
 
     h1 {
       color: lighten($darkImperialBlue, 15%);
-      text-align: center;
     }
 
     .project {
@@ -12,6 +11,10 @@
       flex-direction: column;
       text-align: center;
       margin-bottom: 0.7rem;
+
+      &:nth-child(2) {
+        background-color: $white;
+      }
 
       .fas {
         display: block;
@@ -34,15 +37,28 @@
       }
 
       .technologies {
+        padding-bottom: 1rem;
         margin-top: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid lighten($darkImperialBlue, 10%);
         flex-basis: 25%;
 
-        .tech-image {
-          display: block;
-          margin: auto;
-          width: 60px;
-          height: 50px;
+        @include respond-to('mobile') {
+          border: none;
+        };
+
+        .tech {
+          flex-basis: 33.33333%;
+          width: 33.33333%;
+
+          .tech-image {
+            display: block;
+            margin: auto;
+            width: 60px;
+            height: 50px;
+          }
         }
+
 
         h6 {
           margin-bottom: 1rem;
