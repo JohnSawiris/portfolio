@@ -99,6 +99,7 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1"
   }

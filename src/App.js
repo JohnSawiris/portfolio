@@ -12,8 +12,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Footer from './components/Footer';
 
-class App extends Component {
-  render() {
+const App = (props) => {
     return(
       <Fragment>
         <Navigation />
@@ -27,6 +26,5 @@ class App extends Component {
       </Fragment>
     )
   }
-}
 
 export default App;
