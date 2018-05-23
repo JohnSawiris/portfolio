@@ -24,7 +24,7 @@ const Projects = (props) => (
             <i className="fas fa-home"></i>
             <a href="http://michaelyoungrealtor.net/#/" className="project-name">Michael Young Realtor</a>
             <p className="project-desc">
-              It's a website for a real estate agent that lets visitors get in touch with agent, review properties for sale, and search for properties in their area.
+              A website for a real estate agent that lets visitors get in touch with the agent, review properties for sale, and search for properties in their area.
             </p>
             <div className="container technologies">
               <h6>Technologies used:</h6>
@@ -50,7 +50,7 @@ const Projects = (props) => (
             <i className="fas fa-compact-disc"></i>
             <a href="https://iband-aid.firebaseapp.com/" className="project-name">Band Aid</a>
             <p className="project-desc">
-              It’s a record collection management app, that lets the users to create an account and search records and add them to their collection or Wishlist.
+              A record collection management app, that lets the users create an account and search records and add them to their collection or Wishlist.
             </p>
             <div className="container technologies">
               <h6>Technologies used:</h6>
@@ -76,7 +76,7 @@ const Projects = (props) => (
             <i className="fas fa-trophy"></i>
               <a href="https://github.com/JohnSawiris/capstone-project-planning" className="project-name">Work On Yourself</a>
               <p className="project-desc">
-                It's a web application that lets user creates an account, list their workout exercises based on the muscle group, and search and add new exercises.
+                A web application that lets user create an account, list their workout exercises based on the muscle group, and search and add new exercises.
               </p>
               <div className="container technologies">
                 <h6>Technologies used:</h6>
