@@ -160,15 +160,14 @@
 .projects {
   color: #fff8f0;
   padding: 2rem 1rem 0; }
-  .projects h1 {
-    color: #0e73a2; }
+  .projects h2 {
+    color: #0e73a2;
+    font-family: "Montserrat", sans-serif; }
   .projects .project {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-bottom: 0.7rem; }
-    .projects .project:nth-child(2) {
-      background-color: #fff8f0; }
     .projects .project .fas {
       display: block;
       margin: auto;

@@ -15,8 +15,8 @@ import redux from '../images/redux.png';
 import reactRouter from '../images/react-router.png';
 
 const Projects = (props) => (
-  <div className="projects">
-    <h1>projects</h1>
+  <div className="projects container">
+    <h2>projects</h2>
     <div className="container mt-5">
       <div className="row">
         <div className="col-sm-12 col-md-4">
