@@ -24,7 +24,7 @@ import cSharp from '../images/Logo_csharp.svg';
 const About = (props) => (
     <div className="about container">
 
-      <div className="about-content">
+      <div className="about-content container-fluid">
         <h2>about me</h2>
         <p>My passion is learning new things and being a web developer is signing up to be a lifetime learner.
         I moved to Portland, OR in 2014 from Cairo, Egypt. I gained experience working in customer service and technical support teams. In late 2016, I decided to learn website development. Learning new technologies and languages requires skills I already had, such as problem solving, attention to detail, and an open mind. I recently graduated from CSS/REACT track at Epicodus and I completed a two month internship at Trailhead marketing. These experiences have prepared me to an expert at frontend web development.
