@@ -50,8 +50,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  height: 90vh; }
+  margin: 0; }
   .hero .about-me {
     display: flex;
     padding: 2rem 1rem;
@@ -91,7 +90,7 @@
         .hero .about-me .about-btn {
           font-size: 1.2rem; } }
       .hero .about-me .about-btn .fa-arrow-right {
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
         margin: 0.3rem; }
       .hero .about-me .about-btn:hover .fa-arrow-right {
         color: #1083ba;
@@ -109,7 +108,7 @@
         left: 0;
         opacity: 0;
         transform: scale(0);
-        transition: all 0.5s ease-in; }
+        transition: all 0.35s ease-in; }
       .hero .about-me .about-btn:before {
         border-bottom: 1px solid #1083ba;
         border-left: 1px solid #1083ba;

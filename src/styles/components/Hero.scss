@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
   margin: 0;
-  height: 90vh;
 
   .about-me {
     display: flex;
@@ -55,7 +54,7 @@
       };
 
       .fa-arrow-right {
-        transition: all 0.3s ease;
+        transition: all $medSp ease;
         margin: 0.3rem;
       }
 
@@ -79,7 +78,7 @@
         left: 0;
         opacity: 0;
         transform: scale(0);
-        transition: all $medSp ease-in;
+        transition: all $highSp ease-in;
       }
       &:before {
         border-bottom: 1px solid lighten($darkImperialBlue, 20%);
