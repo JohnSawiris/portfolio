@@ -2,33 +2,22 @@ import React, { PureComponent } from 'react'
 import { Link } from 'react-router-dom'
 import classnames from 'classnames'
 
-// import WithAnimation from './HOC/WithAnimation'
+import WithAnimation from './HOC/WithAnimation'
 
 class Navigation extends PureComponent {
   state = {
-    isActive: false
+    isActive: false,
+    slideDown: false
   }
 
   toggleActive = () => this.setState(state => ({
     isActive: !state.isActive
   }))
 
+
   render() {
-    const { isActive } = this.state;
+    const { isActive, slideDown } = this.state;
     return (
-      // <nav className='navbar navbar-expand-lg navbar-light'>
-      //   <ul className='navbar-nav'>
-      //     <li className='nav-item'>
-      //       <Link className='nav-link' to='/'>home</Link>
-      //     </li>
-      //     <li className='nav-item'>
-      //       <Link className='nav-link' to='/about'>about me</Link>
-      //     </li>
-      //     <li className='nav-item'>
-      //       <Link className='nav-link' to='/projects'>projects</Link>
-      //     </li>
-      //   </ul>
-      // </nav>
       <nav
         className='navigation'
         onClick={this.toggleActive}
@@ -68,4 +57,4 @@ class Navigation extends PureComponent {
     )
   }
 }
-export default Navigation
+export default WithAnimation(Navigation, 'FadeIn', 2500, 500, 500)

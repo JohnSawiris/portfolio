@@ -5,34 +5,104 @@
   padding: 2rem 1rem 0;
 
   .about-content {
-    padding-bottom: 1rem;
-    margin-bottom: 4rem;
     display: flex;
     flex-direction: column;
+    color: #000;
 
-    .skill {
+    .skills {
       display: flex;
-      align-items: flex-end;
-      margin-top: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      z-index: -2;
+      background-color: rgba(255, 255, 255, 0.9);
 
-      .skill-img {
+      .skill {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex-basis: 25%;
+        width: 25%;
+        padding: 0.5rem;
+        margin-top: 1%;
+        border-radius: 15px;
 
-        img {
-          display: block;
-          height: 55px;
-          width: 55px;
-          flex-basis: 60px;
-          margin: auto;
-          object-fit: contain;
+        // JAVASCRIPT
+        &:nth-child(5) {
+          .skill-img {
+            position: relative;
+
+            &:before {
+              content: '';
+              height: 40px;
+              width: 40px;
+              border-radius: 5px;
+              bottom: 4px;
+              left: 1px;
+              background-color: #000;
+              position: absolute;
+              z-index: -1;
+            }
+          }
         }
-      }
+  
+        .skill-img {
 
-      .skill-name {
-        color: $white;
-        font-size: 1.2rem;
-        font-weight: 400;
-        flex-basis: 50%;
-        margin-left: 1rem;
+          i {
+            font-size: 3rem;
+            border-radius: 3px;
+
+            &.fa-react {
+              background-color: #222;
+              color: $react;
+              padding: 0.5rem;
+            }
+
+            &.fa-vuejs {
+              color: $vue;
+            }
+
+            &.fa-angular {
+              color: $angular;
+            }
+
+            &.fa-sass {
+              color: $sass;
+            }
+
+            &.fa-js-square {
+              color: $javaScript;
+            }
+
+            &.fa-css3-alt {
+              color: $css;
+            }
+
+            &.fa-html5 {
+              color: $html;
+            }
+          }
+  
+          img {
+            display: block;
+            height: 55px;
+            width: 55px;
+            flex-basis: 60px;
+            margin: auto;
+            object-fit: contain;
+          }
+        }
+  
+        .skill-name {
+          color: #000;
+          font-size: 1.2rem;
+          font-weight: 400;
+          margin-bottom: 0.4rem;
+          margin-top: auto;
+        }
       }
     }
   }

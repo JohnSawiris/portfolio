@@ -16,12 +16,14 @@ const App = (props) => {
   return (
     <Fragment>
       <Navigation />
-      <Switch>
-        <Route exact path="/"
-          component={Hero} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/projects" component={Projects} />
-      </Switch>
+      <div className="main">
+        <Switch>
+          <Route exact path="/"
+            component={Hero} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/projects" component={Projects} />
+        </Switch>
+      </div>
       <Footer />
     </Fragment>
   )

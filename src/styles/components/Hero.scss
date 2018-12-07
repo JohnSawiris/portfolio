@@ -14,7 +14,7 @@
     top: -160px;
     opacity: 0;
     transform: translateX(-50px);
-    transition: 1000ms ease-in;
+    transition: all 1000ms ease-in;
 
     &.show {
       opacity: 1;
@@ -24,7 +24,7 @@
   
   .about-me {
     display: flex;
-    padding: 2rem;
+    padding: 4rem;
     margin: 0 1rem;
     justify-content: center;
     align-items: center;
