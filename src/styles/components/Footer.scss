@@ -1,26 +1,119 @@
 .footer {
   display: block;
+  height: 130px;
 
   ul {
     display: flex;
-    padding: 0;
-    margin: 0;
     justify-content: center;
     align-items: center;
+    flex-basis: 60px;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    padding: 0;
+    margin: 0 auto;
+    height: 100%;
+    width: 240px;
     list-style: none;
-    flex-basis: 100%;
-    width: 100%;
 
     li {
-      margin: 0.9rem;
-      font-size: 1.8rem;
+      list-style: none;
+      margin: 0 40px;
 
       a {
-        color: $white;
-        transition: color $medSp ease;
+        position: relative;
+        display: block;
+        width: 45px;
+        height: 45px;
+        background: #fff;
+        text-align: center;
+        transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);
+        transition: 500ms cubic-bezier(0.4, 0, 1, 1);
+        box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 10px;
+          left: -20px;
+          height: 100%;
+          width: 20px;
+          background-color: #b1b1b1;
+          transition: 500ms ease;
+          transform: rotate(0deg) skewY(-45deg);
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -20px;
+          left: -10px;
+          height: 20px;
+          width: 100%;
+          background-color: #b1b1b1;
+          transition: 500ms ease;
+          transform: rotate(0deg) SkewX(-45deg);
+        }
 
         &:hover {
-          color: lighten($darkImperialBlue, 5%);
+          transform: perspective(10px) rotate(-30deg) skew(25deg) translate(20px, -20px);
+          box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.8);
+
+        }
+
+        .fab {
+          font-size: 25px;
+          color: #262626;
+          line-height: 45px;
+          transition: 500ms ease;
+        }
+      }
+
+      &:nth-child(1) {
+        a {
+          &:hover {
+            background-color: $linkedIn;
+            
+          .fab {
+            color: $white;
+          }
+  
+          &:before, &:after {
+            background-color: $linkedIn;
+          }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        a {
+          &:hover {
+            background-color: $github;
+            .fab {
+              color: $white;
+            }
+    
+            &::before, &:after {
+              background-color: $github;
+            }
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        a {
+          &:hover {
+            background-color: $google;
+            .fab {
+              color: $white;
+            }
+    
+            &::before, &:after {
+              background-color: $google;
+            }
+          }
+          
         }
       }
     }

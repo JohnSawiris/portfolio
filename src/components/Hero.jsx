@@ -1,20 +1,46 @@
-import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component, Fragment } from 'react'
 
-import WithAnimation from './HOC/WithAnimation';
+import WithAnimation from './HOC/WithAnimation'
+import Typing from 'react-typing-animation'
+import classnames from 'classnames'
 
-const Hero = (props) => (
-  <Fragment>
-    <div className="container-fluid hero">
+import profile from '../images/profile.png'
+
+class Hero extends Component {
+  state = {
+    show: false
+  }
+
+  render() {
+    const { show } = this.state
+
+    return (
+      <Fragment>
+        <div className="hero">
+          <img
+            src={profile}
+            alt="That's me :D"
+            className={classnames('profile-img', {
+              'show': show
+            })} />
           <div className="about-me">
             <span>
-              <h1 className="title">Hello, my name is <span className="name">John Sawiris</span>.</h1>
-              <p className="front-end">I'm a front-end web developer.</p>
+              <Typing speed={75} onFinishedTyping={() => this.setState({
+                show: true
+              })}>
+                <h1 className="title">Hello, my name is <span className="name">John Sawiris.</span></h1>
+              </Typing>
+              <Typing startDelay={4000}>
+                <p className="front-end">
+                  I'm a web Developer located in Portland, OR.
+                </p>
+              </Typing>
             </span>
-            <Link to="/projects" className="about-btn">View my work <i className="fas fa-arrow-right"></i> </Link>
           </div>
-    </div>
-  </Fragment>
-);
+        </div>
+      </Fragment>
+    )
+  }
+}
 
-export default WithAnimation(Hero, 'FadeIn', 500, 500, 500);
+export default WithAnimation(Hero, 'FadeIn', 500, 500, 500)

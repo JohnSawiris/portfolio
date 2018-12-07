@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import React from 'react'
+import PropTypes from 'prop-types'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 const WithAnimation = (Component, transition, appear, enter, leave) => {
   return props => (
@@ -11,9 +11,9 @@ const WithAnimation = (Component, transition, appear, enter, leave) => {
       transitionEnterTimeout={enter}
       transitionLeaveTimeout={leave}
     >
-    <Component {...props} />
+      <Component {...props} />
     </ReactCSSTransitionGroup>
-  );
+  )
 }
 
 WithAnimation.propTypes = {
@@ -24,4 +24,4 @@ WithAnimation.propTypes = {
   leave: PropTypes.number
 }
 
-export default WithAnimation;
+export default WithAnimation

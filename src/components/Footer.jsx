@@ -5,7 +5,7 @@ const Footer = () => (
     <ul>
       <li>
         <a href="https://www.linkedin.com/in/john-sawiris/" target="_blank">
-          <i className="fab fa-linkedin"></i>
+          <i className="fab fa-linkedin-in"></i>
         </a>
       </li>
       <li>
@@ -15,7 +15,7 @@ const Footer = () => (
       </li>
       <li>
         <a href="mailto:johnedwardsawiris@gmail.com">
-          <i className="fab fa-google"></i>
+          <i className="fab fa-google-plus-g"></i>
         </a>
       </li>
     </ul>

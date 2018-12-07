@@ -10,11 +10,17 @@
 /*******************
 GENERAL
 *******************/
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   padding: 0;
-  background-color: darken($black, 4%) !important;
+  background: linear-gradient(to bottom, rgba(0, 12, 64, 0.7), rgba(240, 242, 240, 0.5)), url(../images/portland.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 img {
@@ -26,6 +32,21 @@ img {
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in;
 }
 
 /*******************
