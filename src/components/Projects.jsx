@@ -3,19 +3,18 @@ import React from 'react';
 import WithAnimation from './HOC/WithAnimation';
 
 import michaelYoung from '../images/michael-young-resize.png'
+import bandAid from '../images/bandaid.png'
+import devConnector from '../images/devconnector.png'
 
 import vue from '../images/vue.png';
 import vuex from '../images/vuex.png';
 import vueRouter from '../images/vue-router.png';
 
-
 import angular from '../images/angular.png';
 import webpack from '../images/webpack.png';
 import sass from '../images/sass.png';
 
-import react from '../images/react.png';
-import redux from '../images/redux.png';
-import reactRouter from '../images/react-router.png';
+import mongoDB from '../images/mongodb.png'
 
 const Projects = (props) => (
   <div className="projects-page">
@@ -27,7 +26,8 @@ const Projects = (props) => (
             <img src={michaelYoung} alt="Michael Young" />
           </div>
           <div className="content">
-            <a href="http://michaelyoungrealtor.net/#/" className="project-name">Michael Young Realtor</a>
+            <a href="http://michaelyoungrealtor.net/#/"
+              target="_blank" rel="noopener noreferrer" className="project-name">Michael Young Realtor</a>
             <p className="project-desc">
               A website for a real estate agent that lets visitors get in touch with the agent, review properties for sale, and search for properties in their area.
             </p>
@@ -54,27 +54,27 @@ const Projects = (props) => (
       <div className="project">
         <div className="project-content">
           <div className="img-box">
-            <img src={michaelYoung} alt="Michael Young" />
+            <img src={bandAid} alt="Michael Young" />
           </div>
           <div className="content">
-            <a href="http://michaelyoungrealtor.net/#/" className="project-name">Michael Young Realtor</a>
+            <a href="https://iband-aid.firebaseapp.com/" target="_blank" rel="noopener noreferrer" className="project-name">Band Aid</a>
             <p className="project-desc">
-              A website for a real estate agent that lets visitors get in touch with the agent, review properties for sale, and search for properties in their area.
+              A record collection management app, that lets the users create an account and search records and add them to their collection or Wishlist.
             </p>
             <div className="technologies">
               <h6>Technologies:</h6>
               <div className="tools">
                 <div className="tech">
-                  <img src={vue} alt="Vue" className="tech-image" />
-                  <p>Vue.js</p>
+                  <img src={angular} alt="Angular2" className="tech-image" />
+                  <p>Angular2</p>
                 </div>
                 <div className="tech">
-                  <img src={vuex} alt="Vuex" className="tech-image" />
-                  <p>Vuex</p>
+                  <img src={webpack} alt="Webpack" className="tech-image" />
+                  <p>Webpack</p>
                 </div>
                 <div className="tech">
-                  <img src={vueRouter} alt="Vue Router" className="tech-image" />
-                  <p>Vue Router</p>
+                  <img src={sass} alt="Sass" className="tech-image" />
+                  <p>Sass</p>
                 </div>
               </div>
             </div>
@@ -84,57 +84,31 @@ const Projects = (props) => (
       <div className="project">
         <div className="project-content">
           <div className="img-box">
-            <img src={michaelYoung} alt="Michael Young" />
+            <img src={devConnector} alt="Michael Young" />
           </div>
           <div className="content">
-            <a href="http://michaelyoungrealtor.net/#/" className="project-name">Michael Young Realtor</a>
+            <a href="https://devsgittogether.herokuapp.com/" target="_blank" rel="noopener noreferrer" className="project-name">Dev Connector</a>
             <p className="project-desc">
-              A website for a real estate agent that lets visitors get in touch with the agent, review properties for sale, and search for properties in their area.
+              A web application with full user auth using Passport.js. It lets user create an account with their email and password, create a profile and add education, experience, and a profile image if their email is used with gravatar account as well as including github repos.
             </p>
             <div className="technologies">
               <h6>Technologies:</h6>
               <div className="tools">
                 <div className="tech">
-                  <img src={vue} alt="Vue" className="tech-image" />
-                  <p>Vue.js</p>
+                  <i className="fab fa-node tech-icon"></i>
+                  <p>Node.js</p>
                 </div>
                 <div className="tech">
-                  <img src={vuex} alt="Vuex" className="tech-image" />
-                  <p>Vuex</p>
+                  <p className='express'>express</p>
+                  <p>Express.js</p>
                 </div>
                 <div className="tech">
-                  <img src={vueRouter} alt="Vue Router" className="tech-image" />
-                  <p>Vue Router</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="project">
-        <div className="project-content">
-          <div className="img-box">
-            <img src={michaelYoung} alt="Michael Young" />
-          </div>
-          <div className="content">
-            <a href="http://michaelyoungrealtor.net/#/" className="project-name">Michael Young Realtor</a>
-            <p className="project-desc">
-              A website for a real estate agent that lets visitors get in touch with the agent, review properties for sale, and search for properties in their area.
-            </p>
-            <div className="technologies">
-              <h6>Technologies:</h6>
-              <div className="tools">
-                <div className="tech">
-                  <img src={vue} alt="Vue" className="tech-image" />
-                  <p>Vue.js</p>
+                  <i className="fab fa-react tech-icon"></i>
+                  <p>React</p>
                 </div>
                 <div className="tech">
-                  <img src={vuex} alt="Vuex" className="tech-image" />
-                  <p>Vuex</p>
-                </div>
-                <div className="tech">
-                  <img src={vueRouter} alt="Vue Router" className="tech-image" />
-                  <p>Vue Router</p>
+                  <img src={mongoDB} alt="MongoDB" className="tech-image" />
+                  <p>MongoDB</p>
                 </div>
               </div>
             </div>
@@ -143,10 +117,7 @@ const Projects = (props) => (
       </div>
       {/* <div className="project">
         <i className="fas fa-compact-disc"></i>
-        <a href="https://iband-aid.firebaseapp.com/" className="project-name">Band Aid</a>
-        <p className="project-desc">
-          A record collection management app, that lets the users create an account and search records and add them to their collection or Wishlist.
-            </p>
+        
         <div className="container technologies">
           <h6>Technologies used:</h6>
           <div className="row justify-content-center">

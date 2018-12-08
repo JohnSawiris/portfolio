@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 //Styles
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/App.css';
 
 // Components

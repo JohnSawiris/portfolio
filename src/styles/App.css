@@ -15,9 +15,6 @@
   box-shadow: 0 10px 10px #030303;
   transition: 500ms ease-in-out;
   animation: pluse 3s linear infinite; }
-  .navigation:hover {
-    background-color: white;
-    animation: none; }
   .navigation .humburger-btn {
     position: absolute;
     top: 0;
@@ -40,8 +37,8 @@
       left: 15px;
       right: 0;
       z-index: 1;
-      background-color: rgba(173, 20, 87, 0.9);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6), inset 0 2px 2px rgba(173, 20, 87, 0.9);
+      background-color: rgba(173, 20, 87, 0.7);
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.6), inset 0 2px 10px rgba(173, 20, 87, 0.4);
       border-radius: 25px;
       transform: rotate(0deg);
       transition: all 350ms ease-in-out; }
@@ -107,6 +104,7 @@
           font-weight: 500;
           font-size: 1.4em;
           text-align: center;
+          margin-top: -6px;
           color: #fff8f0;
           font-family: "Montserrat", sans-serif;
           padding: 0.5rem; }
@@ -174,9 +172,10 @@
       transform: translateX(0); }
   .hero .about-me {
     display: flex;
-    padding: 4rem;
-    margin: 0 1rem;
     justify-content: center;
+    max-width: 1000px;
+    padding: 2rem;
+    margin: 0 1rem;
     align-items: center;
     flex-direction: column;
     border-radius: 10px;
@@ -250,11 +249,28 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 2rem 1rem 0; }
+  margin: 4rem auto 0;
+  padding: 2rem 1rem 0;
+  max-width: 600px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.8); }
   .about .about-content {
     display: flex;
     flex-direction: column;
-    color: #000; }
+    color: #000;
+    max-width: 600px;
+    z-index: 1000;
+    color: #000;
+    padding: 1rem; }
+    .about .about-content h2 {
+      font-family: "Montserrat", sans-serif;
+      color: #000;
+      text-transform: capitalize; }
+    .about .about-content p {
+      color: #000;
+      line-height: 25px;
+      font-size: 1.1rem; }
     .about .about-content .skills {
       display: flex;
       flex-wrap: wrap;
@@ -262,8 +278,7 @@
       width: 100%;
       max-width: 600px;
       margin: 0 auto;
-      z-index: -2;
-      background-color: rgba(255, 255, 255, 0.9); }
+      z-index: -2; }
       .about .about-content .skills .skill {
         display: flex;
         flex-direction: column;
@@ -317,7 +332,8 @@
           font-size: 1.2rem;
           font-weight: 400;
           margin-bottom: 0.4rem;
-          margin-top: auto; }
+          margin-top: auto;
+          font-family: "Gamja Flower", cursive; }
   .about h2 {
     font-family: "Montserrat", sans-serif;
     color: #0e73a2; }
@@ -329,132 +345,161 @@
     line-height: 1.4rem;
     letter-spacing: 1px; }
 
-.projects-page h2 {
-  color: rgba(173, 20, 87, 0.9);
-  font-family: sans-serif;
-  text-align: center;
-  font-size: 4rem;
-  text-transform: capitalize; }
-.projects-page .projects {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-  align-items: flex-start;
-  padding: 2rem 1rem 0;
-  width: 1200px;
-  margin: auto; }
-  @media (max-width: 992px) {
-    .projects-page .projects {
-      width: 900px; } }
-  @media (max-width: 767px) {
-    .projects-page .projects {
-      width: 100%; } }
-  .projects-page .projects .project {
+.projects-page {
+  width: 100%; }
+  .projects-page h2 {
+    color: #fff8f0;
+    font-family: sans-serif;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    text-transform: capitalize;
+    margin-top: 4rem; }
+  .projects-page .projects {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    transition: 500ms ease-in-out;
-    min-height: 400px;
-    width: 100%;
-    flex-basis: 30%;
-    margin-bottom: 1rem; }
+    align-content: flex-start;
+    align-items: flex-start;
+    padding: 2rem 1rem 0;
+    margin: auto; }
     @media (max-width: 992px) {
-      .projects-page .projects .project {
-        flex-basis: 320px; } }
-    @media (max-width: 767px) {
-      .projects-page .projects .project {
-        flex-basis: 340px; } }
-    .projects-page .projects .project .project-content {
+      .projects-page .projects {
+        justify-content: space-between; } }
+    .projects-page .projects .project {
       display: flex;
-      flex-direction: column;
-      text-align: center;
-      flex-basis: auto;
-      margin-bottom: 0.7rem;
-      position: absolute;
-      width: 300px;
-      height: 400px;
-      z-index: 90;
-      background-color: #fff;
-      transform-style: preserve-3d;
-      transform: perspective(2000px);
-      box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5), 0 20px 100px rgba(0, 0, 0, 0.5), 0 20px 25px rgba(0, 89, 167, 0.247);
-      transition: 1000ms ease-in-out; }
-      .projects-page .projects .project .project-content:hover {
-        transform: perspective(2000px) rotate(-7deg) translateX(20%);
+      justify-content: center;
+      align-items: center;
+      transition: 500ms ease-in-out;
+      min-height: 400px;
+      width: 100%;
+      flex-basis: 30%;
+      margin-bottom: 1rem; }
+      @media (max-width: 992px) {
+        .projects-page .projects .project {
+          width: 47%;
+          flex-basis: 47%; } }
+      @media (max-width: 767px) {
+        .projects-page .projects .project {
+          width: 49%;
+          flex-basis: 49%; } }
+      .projects-page .projects .project:nth-child(odd) .project-content:hover {
+        transform: perspective(2000px) rotate(-7deg) translateX(-10%);
         z-index: 99;
-        box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5), 0 10px 100px rgba(0, 0, 0, 0.5); }
+        box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5); }
+        @media (max-width: 992px) {
+          .projects-page .projects .project:nth-child(odd) .project-content:hover {
+            transform: perspective(2000px) rotate(-8deg) translateX(100%); } }
         @media (max-width: 767px) {
-          .projects-page .projects .project .project-content:hover {
-            transform: perspective(2000px) rotate(-10deg) translateX(50%);
-            z-index: 99;
-            width: 200px; } }
-        .projects-page .projects .project .project-content:hover .img-box {
+          .projects-page .projects .project:nth-child(odd) .project-content:hover {
+            transform: perspective(2000px) rotate(-10deg) translateX(90%);
+            z-index: 99; } }
+        .projects-page .projects .project:nth-child(odd) .project-content:hover .img-box {
           transform: rotateY(-135deg); }
-      .projects-page .projects .project .project-content .img-box {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        transform-origin: left;
-        transition: 1000ms ease-in-out; }
-        .projects-page .projects .project .project-content .img-box:after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          background: linear-gradient(to bottom, rgba(255, 253, 228, 0.3), rgba(0, 89, 167, 0.4)); }
-        .projects-page .projects .project .project-content .img-box img {
-          height: 100%; }
-      .projects-page .projects .project .project-content .content {
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        padding: 1rem;
-        height: 100%;
+      .projects-page .projects .project:nth-child(even) .project-content:hover {
+        transform: perspective(2000px) rotate(-7deg) translateX(50%);
+        z-index: 99;
+        box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5); }
+        @media (max-width: 992px) {
+          .projects-page .projects .project:nth-child(even) .project-content:hover {
+            transform: perspective(2000px) rotate(-8deg) translateX(10%);
+            z-index: 99; } }
+        @media (max-width: 767px) {
+          .projects-page .projects .project:nth-child(even) .project-content:hover {
+            transform: perspective(2000px) rotate(-10deg) translateX(-10%);
+            z-index: 99; } }
+        .projects-page .projects .project:nth-child(even) .project-content:hover .img-box {
+          transform: rotateY(-135deg); }
+      .projects-page .projects .project .project-content {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-between; }
-      .projects-page .projects .project .project-content .fas {
-        display: block;
-        margin: auto;
-        font-size: 4rem; }
-      .projects-page .projects .project .project-content .project-name {
-        font-size: 1rem;
-        font-weight: 500;
-        font-family: "Muli", sans-serif;
-        color: #0e73a2;
-        margin-top: 1rem; }
-      .projects-page .projects .project .project-content .project-desc {
-        font-size: 0.9rem;
-        margin-top: 1rem;
-        flex-basis: 25%; }
-      .projects-page .projects .project .project-content .technologies {
-        padding-bottom: 1rem;
-        margin-top: auto;
-        flex-basis: 25%; }
-        @media (max-width: 767px) {
-          .projects-page .projects .project .project-content .technologies {
-            border: none; } }
-        .projects-page .projects .project .project-content .technologies .tools {
+        text-align: center;
+        flex-basis: auto;
+        margin-bottom: 0.7rem;
+        position: absolute;
+        width: 300px;
+        height: 400px;
+        z-index: 90;
+        background-color: #fff;
+        transform-style: preserve-3d;
+        transform: perspective(2000px);
+        box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5), 0 20px 100px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        transition: 1000ms ease-in-out; }
+        .projects-page .projects .project .project-content .img-box {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          transform-origin: left;
+          transition: 1000ms ease-in-out; }
+          .projects-page .projects .project .project-content .img-box:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to top, rgba(255, 253, 228, 0.3), rgba(0, 89, 167, 0.2)); }
+          .projects-page .projects .project .project-content .img-box img {
+            height: 100%; }
+        .projects-page .projects .project .project-content .content {
+          position: absolute;
+          top: 0;
+          z-index: -1;
+          padding: 0.5rem;
+          height: 100%;
           display: flex;
-          flex-wrap: wrap; }
-          .projects-page .projects .project .project-content .technologies .tools .tech {
-            flex-basis: 33.33333%;
-            width: 33.33333%; }
-            .projects-page .projects .project .project-content .technologies .tools .tech .tech-image {
-              display: block;
-              margin: auto;
-              width: 60px;
-              height: 50px; }
-        .projects-page .projects .project .project-content .technologies h6 {
-          margin-bottom: 1rem; }
-        .projects-page .projects .project .project-content .technologies p {
-          font-size: 0.8rem;
-          color: #000;
-          font-weight: 300;
-          text-align: center; }
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          text-align: left; }
+          .projects-page .projects .project .project-content .content a {
+            margin: 0; }
+        .projects-page .projects .project .project-content .fas {
+          display: block;
+          margin: auto;
+          font-size: 4rem; }
+        .projects-page .projects .project .project-content .project-name {
+          font-size: 1rem;
+          font-weight: 500;
+          font-family: "Muli", sans-serif;
+          color: #0e73a2;
+          margin-top: 1rem; }
+        .projects-page .projects .project .project-content .project-desc {
+          font-size: 0.9rem;
+          flex-basis: 25%; }
+        .projects-page .projects .project .project-content .technologies {
+          padding-bottom: 1rem;
+          margin-top: auto;
+          flex-basis: 25%; }
+          @media (max-width: 767px) {
+            .projects-page .projects .project .project-content .technologies {
+              border: none; } }
+          .projects-page .projects .project .project-content .technologies .tools {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; }
+            .projects-page .projects .project .project-content .technologies .tools .tech {
+              flex-basis: 33.33333%;
+              width: 33.33333%;
+              text-align: center; }
+              .projects-page .projects .project .project-content .technologies .tools .tech p.express {
+                font-size: 1.9em;
+                line-height: 1.4em; }
+              .projects-page .projects .project .project-content .technologies .tools .tech .tech-image {
+                display: block;
+                margin: auto;
+                width: 60px;
+                height: 50px; }
+              .projects-page .projects .project .project-content .technologies .tools .tech .tech-icon {
+                font-size: 3.5rem; }
+          .projects-page .projects .project .project-content .technologies h6 {
+            margin-bottom: 1rem; }
+          .projects-page .projects .project .project-content .technologies p {
+            font-size: 0.8rem;
+            color: #000;
+            font-weight: 300;
+            text-align: center; }
 
 .footer {
   display: block;
@@ -533,6 +578,10 @@
           color: #fff8f0; }
         .footer ul li:nth-child(3) a:hover::before, .footer ul li:nth-child(3) a:hover:after {
           background-color: #dc4e41; }
+  .footer p {
+    font-family: "Gamja Flower", cursive;
+    text-align: center;
+    font-size: 2rem; }
 
 /*******************
 GENERAL
@@ -543,18 +592,23 @@ GENERAL
 body {
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, rgba(0, 12, 64, 0.7), rgba(240, 242, 240, 0.5)), url(../images/portland.jpg);
+  background: linear-gradient(to bottom, rgba(0, 12, 64, 0.7), rgba(240, 242, 240, 0.9)), url(../images/portland.jpg);
   background-position: center center;
   background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column; }
 
 .main {
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 4rem; }
+
+.main > * {
+  width: 100%; }
 
 img {
   max-width: 100%; }

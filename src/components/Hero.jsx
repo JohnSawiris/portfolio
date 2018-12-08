@@ -25,14 +25,14 @@ class Hero extends Component {
             })} />
           <div className="about-me">
             <span>
-              <Typing speed={75} onFinishedTyping={() => this.setState({
+              <Typing speed={100} onFinishedTyping={() => this.setState({
                 show: true
               })}>
                 <h1 className="title">Hello, my name is <span className="name">John Sawiris.</span></h1>
               </Typing>
-              <Typing startDelay={4000}>
+              <Typing startDelay={5000}>
                 <p className="front-end">
-                  I'm a web Developer located in Portland, OR.
+                  I'm a web Developer located in Portland, Oregon.
                 </p>
               </Typing>
             </span>

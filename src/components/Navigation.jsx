@@ -6,8 +6,7 @@ import WithAnimation from './HOC/WithAnimation'
 
 class Navigation extends PureComponent {
   state = {
-    isActive: false,
-    slideDown: false
+    isActive: false
   }
 
   toggleActive = () => this.setState(state => ({
@@ -16,7 +15,7 @@ class Navigation extends PureComponent {
 
 
   render() {
-    const { isActive, slideDown } = this.state;
+    const { isActive } = this.state;
     return (
       <nav
         className='navigation'
